@@ -57,13 +57,150 @@ img[alt~="center"] {
 
 # History
 
-TODO
+---
+
+# October 2001
+
+- IPython 0.0.1: 1 file, 110 lines of code (excluding comments)
+- IPython 0.1 (November): 3k lines of code
+
+TODO: screenshot IPython
+
+---
+
+# December 2011
+
+- First release of IPython notebook
+- IPython 0.12: 46k Python, 3k Javascript
+
+TODO: screenshot notebook
+
+---
+
+# October 2020
+
+- IPython 7.12: 34k Python
+- Notebook 6.1: 13k Python, 16k Javascript
+- JupyterHub 1.2: 16k Python
+- JupyterLab 3.0: 100k Typescript
+- 282 repos across 9 GitHub organizations
+
+---
+
+# Governance
+
+---
+
+# 2014: creation of Project Jupyter
+
+- BDFL + steering council model
+- Steering council composed of most active members
+- Limitations:
+    - people not active anymore still in the council
+    - the council can not grow undefinitely
+
+---
+
+# 2020: JDC elections
+
+- Jupyter Distinguished Contributors elections
+- rewards people active in the community for 2 consecutive years
+- cohort of 10 JDC per year
+
+---
+
+# 2022: new governance model
+
+- Executive council: responsible for all dimensions of the project (legal, financial, community, operations, ...)
+- Software Steering Council: software-related decisions across Project Jupyter, coordination across subprojects
+- Software Subprojects: governance and software decisions of subparts of Project Jupyter (Kernels, Server, JupyterLab, ...)
+- Each software subproject nominates a single representative to the SSC
 
 ---
 
 # Architecture and Protocol
 
-TODO
+---
+
+# The Jupyter Kernel Protocol
+
+- Documentation at https://jupyter-client.readthedocs.io/en/stable/messaging.html
+- Agnostic to the language
+- `jupyter_client` is the reference implementation in Python
+- `xeus` is the reference implementation in C++
+- Implementations rely on ZeroMQ
+
+![bg fit right:30%](https://xeus.readthedocs.io/en/latest/_images/jupyter_archi.svg)
+
+---
+
+# The Jupyter kernel protocol
+
+Clients and kernels communicate (over the network) through 5 channels:
+
+- Shell: code execution, code completion
+- Control: stop and restart, kernel info, debugging
+- stdin: input request
+- IOPub: broadcast channel to publish results and kernel state
+- Heartbeat: to check the kernel is still alive
+
+ZeroMQ provides the low-level transport layer over which the messages are sent.
+
+---
+
+![bg fit 60%](img/client_server_kernel-0.svg)
+
+---
+
+![bg fit 60%](img/client_server_kernel-1.svg)
+
+---
+
+![bg fit 60%](img/client_server_kernel-2.svg)
+
+---
+
+# Jupyter Server
+
+- Backend to Jupyter Web applications (not the consoles):
+    - core services
+    - APIs
+    - REST endpoints
+- Client of kernels
+- Responsible for launching and keeping kernels alive
+- Use the same protocol for Web apps and kernels
+
+---
+
+# Servers
+
+- Jupyter Server: historical, mono user, based on tornado
+- Jupyverse: alternative implementation based on FastAPI
+- JupyterHub: multi-user server using Jupyter Server
+
+---
+
+# Kernels
+
+- ipykernel, reference implementation of python kernel
+- kernel wrapper approach (kernels based on ipykernel)
+- standalone kernels (IJulia, IRKernel)
+- xeus-based kernels (xeus-cling, xeus-python, xeus-lua, etc...)
+
+---
+
+![bg fit 60%](img/widgets.svg)
+
+---
+
+# Jupyter Widgets
+
+- ipywidgets / xwidgets: basic interactive widgets (sliders, buttons, checkboxes...)
+- ipyleaflet / xleaflet: interactive maps based on leaflet
+- bqplot / xplot: plotting libraries implementing the grammar of graphics
+- many others ....
+
+![bg fit right](img/widgets.png)
 
 ---
 
@@ -73,7 +210,34 @@ TODO
 
 # Debugger
 
-TODO
+---
+
+# Debugger Protocol
+
+- New debug\_request / debug\_reply sent over the control channel
+- Content follows the specification of the DAP by Microsoft: https://microsoft.github.io/debug-adapter-protocol/ 
+- Additional messages:
+    - dumpCell: maps a temporary file to a cell
+    - debugInfo: retrieves debugger state after refresh + dumpCell file computation info
+    - inspectVariables: gets defined variables values
+    - richInspectVariables: same as previous with rich rendering
+
+---
+
+![bg fit 60%](img/debugger_sequence-1.svg)
+
+---
+
+![bg fit 60%](img/debugger_sequence-2.svg)
+
+---
+
+![bg fit 60%](img/debugger_sequence-3.svg)
+
+---
+
+
+![bg fit 60%](img/debugger_sequence-4.svg)
 
 ---
 
