@@ -19,6 +19,10 @@ img[alt~="center"] {
   display: block;
   margin: 0 auto;
 }
+video {
+  width: 100%;
+  height: auto;
+}
 </style>
 
 ![bg fit right:30%](https://jupyter.org/assets/homepage/main-logo.svg)
