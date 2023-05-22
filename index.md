@@ -215,7 +215,7 @@ ZeroMQ provides the low-level transport layer over which the messages are sent.
 # Debugger Protocol
 
 - New debug\_request / debug\_reply sent over the control channel
-- Content follows the specification of the DAP by Microsoft: https://microsoft.github.io/debug-adapter-protocol/ 
+- Content follows the specification of the DAP by Microsoft: https://microsoft.github.io/debug-adapter-protocol/
 - Additional messages:
     - dumpCell: maps a temporary file to a cell
     - debugInfo: retrieves debugger state after refresh + dumpCell file computation info
@@ -259,7 +259,7 @@ ZeroMQ provides the low-level transport layer over which the messages are sent.
 
 - Official Jupyter frontend
 - Run in the browser by default
-- Jupyter AI: Copilot-like features coming to JupyterLab: `pip install jupyter-ai`
+- Jupyter AI: ChatGPT-like features coming to JupyterLab: `pip install jupyter-ai`
 - Demo?
 
 ---
@@ -273,6 +273,7 @@ ZeroMQ provides the low-level transport layer over which the messages are sent.
   - Voici to turn notebooks into static web applications
   - Support for Jupyter Widgets and visualization libraries
 - No real `jupyter-server`, `jupyter-client`, `nbconvert`
+- Used on many websites: [numpy.org](https://numpy.org), [sympy.org](https://sympy.org), [Try Jupyter](https://try.jupyter.org), ...
 
 ---
 
