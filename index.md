@@ -216,6 +216,7 @@ ZeroMQ provides the low-level transport layer over which the messages are sent.
 
 ---
 
+
 # Debugger Protocol
 
 - New debug\_request / debug\_reply sent over the control channel
@@ -245,7 +246,23 @@ ZeroMQ provides the low-level transport layer over which the messages are sent.
 
 ---
 
-# VS Code Notebook vs JupyterLab
+# Using the debugger frontend
+
+---
+
+![bg fit 70%](img/debugger-1.png)
+
+---
+
+![bg fit 70%](img/debugger-2.png)
+
+---
+
+![bg fit 70%](img/debugger-3.png)
+
+---
+
+# VS Code Notebooks vs JupyterLab
 
 ---
 
@@ -255,7 +272,6 @@ ZeroMQ provides the low-level transport layer over which the messages are sent.
 - Integrate with the VS Code debugger (but uses the Jupyter debugger underneath)
 - Integrate with GitHub Copilot
 - Slightly more complicated to use?
-- Demo ?
 
 ---
 
@@ -264,7 +280,6 @@ ZeroMQ provides the low-level transport layer over which the messages are sent.
 - Official Jupyter frontend
 - Run in the browser by default
 - Jupyter AI: ChatGPT-like features coming to JupyterLab: `pip install jupyter-ai`
-- Demo?
 
 ---
 
@@ -277,7 +292,6 @@ ZeroMQ provides the low-level transport layer over which the messages are sent.
   - Voici to turn notebooks into static web applications
   - Support for Jupyter Widgets and visualization libraries
 - No real `jupyter-server`, `jupyter-client`, `nbconvert`
-- Used on many websites: [numpy.org](https://numpy.org), [sympy.org](https://sympy.org), [Try Jupyter](https://try.jupyter.org), ...
 
 ---
 
@@ -286,6 +300,20 @@ ZeroMQ provides the low-level transport layer over which the messages are sent.
 ---
 
 ![bg fit 75%](./img/jupyterlite.svg)
+
+---
+
+# JupyterLite
+
+- Used on many websites: [numpy.org](https://numpy.org), [sympy.org](https://sympy.org), [Try Jupyter](https://try.jupyter.org), ...
+- Works as a PWA (Progressive Web App) on mobile devices:
+
+
+<div style="text-align: center">
+<img src="./img/jupyterlite-pwa-1.png" height="400px">
+<img src="./img/jupyterlite-pwa-2.png" height="400px">
+
+</div>
 
 ---
 
@@ -368,6 +396,22 @@ ZeroMQ provides the low-level transport layer over which the messages are sent.
 ---
 
 # Jupyter Notebook 7
+
+---
+
+# A new version for Jupyter Notebook
+
+- Notebook 7 includes many new features
+- Keeps the same UX and document-centric look and feel
+- Uses the same Notebook Format and Jupyter Protocol
+- Is compatible with the JupyterLab extension ecosystem
+
+
+![center h:300px](https://jupyter.org/assets/homepage/main-logo.svg)
+
+---
+
+![center](img/notebook-7.png)
 
 ---
 
