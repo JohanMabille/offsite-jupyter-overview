@@ -262,15 +262,17 @@ ZeroMQ provides the low-level transport layer over which the messages are sent.
 
 ---
 
-# VS Code Notebooks vs JupyterLab
+# Visual Studio Code vs JupyterLab
 
 ---
 
-# VS Code
+# VS Code Notebooks
 
+- Intellisense
+- Integrates with the VS Code debugger (but uses the Jupyter debugger underneath)
 - Support for Jupyter Widgets (core and custom widgets)
-- Integrate with the VS Code debugger (but uses the Jupyter debugger underneath)
-- Integrate with GitHub Copilot
+- Variable explorer
+- Integrates with GitHub Copilot
 - Slightly more complicated to use?
 
 ---
@@ -279,8 +281,10 @@ ZeroMQ provides the low-level transport layer over which the messages are sent.
 
 - Official Jupyter frontend
 - Run in the browser by default
-- Jupyter AI: ChatGPT-like features coming to JupyterLab: `pip install jupyter-ai`
+- Also exists as a desktop app
+- Jupyter AI: ChatGPT-like features: `pip install jupyter-ai`
   - Support for several model providers: https://jupyter-ai.readthedocs.io/en/latest/users/index.html#model-providers
+  - Dall-E, ChatGPT...
 
 ---
 
@@ -436,11 +440,14 @@ ZeroMQ provides the low-level transport layer over which the messages are sent.
 - JupyterLab 4 is released :tada:
 - Notebook 7 final will soon be released
 - JupyterLite 0.2 based on JupyterLab 4 and Notebook 7
-- ...
 
 ---
 
 
 # Thanks!
 
-Thanks to Martha Cryan, Afshin T. Darian and Frederic Collonval for their slides on JupyterLab 4.
+<small>
+Thanks to:
+- Martha Cryan, Afshin T. Darian and Frederic Collonval for their slides on JupyterLab 4.
+- Eric Gentry for the debugger screenshots
+</small>
