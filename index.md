@@ -68,7 +68,9 @@ video {
 - IPython 0.0.1: 1 file, 110 lines of code (excluding comments)
 - IPython 0.1 (November): 3k lines of code
 
-TODO: screenshot IPython
+<div style="text-align: center">
+<img src="./img/ipython_2001.png" height="400px">
+</div>
 
 ---
 
@@ -77,7 +79,9 @@ TODO: screenshot IPython
 - First release of IPython notebook
 - IPython 0.12: 46k Python, 3k Javascript
 
-TODO: screenshot notebook
+<div style="text-align: center">
+<img src="./img/notebook_2011.png" height="400px">
+</div>
 
 ---
 
@@ -105,11 +109,13 @@ TODO: screenshot notebook
 
 ---
 
-# 2020: JDC elections
+# 2020: Transition to new model
 
-- Jupyter Distinguished Contributors elections
-- rewards people active in the community for 2 consecutive years
-- cohort of 10 JDC per year
+- Bootstrapping of new governance model
+- Jupyter Distinguished Contributors elections:
+    - rewards people active in the community for 2 consecutive years
+    - cohort of 10 JDC per year
+    - JDCs are not involved in governance
 
 ---
 
@@ -166,7 +172,7 @@ ZeroMQ provides the low-level transport layer over which the messages are sent.
 
 # Jupyter Server
 
-- Backend to Jupyter Web applications (not the consoles):
+- Backend to "Modern" Jupyter Web applications (not the consoles):
     - core services
     - APIs
     - REST endpoints
@@ -178,7 +184,7 @@ ZeroMQ provides the low-level transport layer over which the messages are sent.
 
 # Servers
 
-- Jupyter Server: historical, mono user, based on tornado
+- Jupyter Server: historical, mono user, initially based on tornado
 - Jupyverse: alternative implementation based on FastAPI
 - JupyterHub: multi-user server using Jupyter Server
 
@@ -187,24 +193,13 @@ ZeroMQ provides the low-level transport layer over which the messages are sent.
 # Kernels
 
 - ipykernel, reference implementation of python kernel
-- kernel wrapper approach (kernels based on ipykernel)
+- kernel wrapper approach (kernels based on ipykernel such as ipyflow)
 - standalone kernels (IJulia, IRKernel)
 - xeus-based kernels (xeus-cling, xeus-python, xeus-lua, etc...)
 
 ---
 
 ![bg fit 60%](img/widgets.svg)
-
----
-
-# Jupyter Widgets
-
-- ipywidgets / xwidgets: basic interactive widgets (sliders, buttons, checkboxes...)
-- ipyleaflet / xleaflet: interactive maps based on leaflet
-- bqplot / xplot: plotting libraries implementing the grammar of graphics
-- many others ....
-
-![bg fit right](img/widgets.png)
 
 ---
 
