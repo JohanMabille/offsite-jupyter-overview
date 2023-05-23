@@ -283,7 +283,7 @@ ZeroMQ provides the low-level transport layer over which the messages are sent.
 
 ---
 
-# JupyterLite
+# JupyterLite :bulb:
 
 - WebAssembly powered Jupyter running in the browser
 - Stands on the shoulder of giants:
@@ -318,6 +318,21 @@ ZeroMQ provides the low-level transport layer over which the messages are sent.
 ---
 
 # JupyterLab 4
+
+![bg fit right:33%](./img/jupyterlab-logo.png)
+
+---
+
+# New Features
+
+- Performance improvements (Codemirror 6, virtual rendering)
+- Real-Time Collaboration improvements (install with `pip install jupyter-collaboration`)
+- Improved search
+- Table of Contents
+- PyPI Extension Manager
+- Linked kernels enhancements
+- Support for notifications
+- JupyterLab Desktop
 
 ---
 
