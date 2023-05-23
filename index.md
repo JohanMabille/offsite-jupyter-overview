@@ -280,6 +280,7 @@ ZeroMQ provides the low-level transport layer over which the messages are sent.
 - Official Jupyter frontend
 - Run in the browser by default
 - Jupyter AI: ChatGPT-like features coming to JupyterLab: `pip install jupyter-ai`
+  - Support for several model providers: https://jupyter-ai.readthedocs.io/en/latest/users/index.html#model-providers
 
 ---
 
